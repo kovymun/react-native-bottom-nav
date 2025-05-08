@@ -1,30 +1,13 @@
 import { StyleSheet, Text, View, Image } from "react-native";
 import React from "react";
 import { taskCategories } from "../../constants/taskCategories";
+import { globalStyles } from "../../styles/globalStyles";
 
 const Home = () => {
   return (
-    <View style={styles.screen}>
-      <Text
-        style={{
-          fontSize: 28,
-          textAlign: "center",
-          marginTop: 24,
-          letterSpacing: 2,
-          fontWeight: 700,
-          color: "#00C569",
-        }}
-      >
-        Help Mate
-      </Text>
-      <Text
-        style={{
-          fontSize: 16,
-          textAlign: "center",
-          paddingHorizontal: 8,
-          marginVertical: 24,
-        }}
-      >
+    <View style={globalStyles.screen}>
+      <Text style={globalStyles.screenTitle}>Help Mate</Text>
+      <Text style={styles.description}>
         Need a hand? Help Mate connects you with trusted local freelancers for
         everyday tasks like moving furniture, fixing leaks, cleaning homes, or
         tutoring your kids. Find reliable help nearby fast, affordable, and
@@ -42,18 +25,16 @@ const Home = () => {
         Popular Projects
       </Text>
 
-      <View>
-        {/* Card Element */}
-        {taskCategories.map(({ id, title, cost, image }) => (
-          <View style={styles.card} key={id}>
-            <Image style={styles.image} source={image} />
-            <View style={styles.textContainer}>
-              <Text style={styles.title}>{title}</Text>
-              <Text style={styles.cost}>{cost}</Text>
-            </View>
+      {/* Card Element */}
+      {taskCategories.map(({ id, title, cost, image }) => (
+        <View style={styles.card} key={id}>
+          <Image style={styles.image} source={image} />
+          <View style={styles.textContainer}>
+            <Text style={styles.title}>{title}</Text>
+            <Text style={styles.cost}>{cost}</Text>
           </View>
-        ))}
-      </View>
+        </View>
+      ))}
     </View>
   );
 };
@@ -61,12 +42,14 @@ const Home = () => {
 export default Home;
 
 const styles = StyleSheet.create({
-  screen: {
-    flex: 1,
-    padding: 20,
+  description: {
+    fontSize: 16,
+    paddingHorizontal: 8,
+    marginVertical: 24,
   },
   card: {
     flexDirection: "row",
+    alignItems: "center",
     backgroundColor: "#f6f8f6", // soft light color
     borderRadius: 16,
     padding: 8,
@@ -74,9 +57,8 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 8,
     shadowOffset: { width: 0, height: 2 },
-    elevation: 3, // Android shadow
+    elevation: 3,
     marginBottom: 16,
-    alignItems: "center",
   },
   image: {
     width: 100,
