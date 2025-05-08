@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
 import React from "react";
 import { taskCategories } from "../../constants/taskCategories";
 
@@ -7,18 +7,22 @@ const Home = () => {
     <View style={styles.screen}>
       <Text
         style={{
-          fontSize: 24,
+          fontSize: 28,
           textAlign: "center",
-          paddingVertical: 15,
+          marginTop: 24,
+          letterSpacing: 2,
+          fontWeight: 700,
+          color: "#00C569",
         }}
       >
-        Welcome to Help Mate
+        Help Mate
       </Text>
       <Text
         style={{
           fontSize: 16,
           textAlign: "center",
-          padding: 15,
+          paddingHorizontal: 8,
+          marginVertical: 24,
         }}
       >
         Need a hand? Help Mate connects you with trusted local freelancers for
@@ -27,21 +31,29 @@ const Home = () => {
         hassle-free
       </Text>
 
-      {/* I only want this section to scroll */}
-      <ScrollView>
-        <View>
-          {/* Card Element */}
-          {taskCategories.map(({ id, title, cost, image }) => (
-            <View style={styles.card} key={id}>
-              <Image style={styles.image} source={image} />
-              <View style={styles.textContainer}>
-                <Text style={styles.title}>{title}</Text>
-                <Text style={styles.cost}>{cost}</Text>
-              </View>
+      <Text
+        style={{
+          fontSize: 20,
+          fontWeight: 600,
+          paddingHorizontal: 8,
+          marginBottom: 12,
+        }}
+      >
+        Popular Projects
+      </Text>
+
+      <View>
+        {/* Card Element */}
+        {taskCategories.map(({ id, title, cost, image }) => (
+          <View style={styles.card} key={id}>
+            <Image style={styles.image} source={image} />
+            <View style={styles.textContainer}>
+              <Text style={styles.title}>{title}</Text>
+              <Text style={styles.cost}>{cost}</Text>
             </View>
-          ))}
-        </View>
-      </ScrollView>
+          </View>
+        ))}
+      </View>
     </View>
   );
 };
@@ -51,7 +63,7 @@ export default Home;
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    padding: 12,
+    padding: 20,
   },
   card: {
     flexDirection: "row",
