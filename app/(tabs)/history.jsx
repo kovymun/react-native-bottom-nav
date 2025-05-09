@@ -17,14 +17,24 @@ const History = () => {
             {/* <Image style={styles.image} source={Tutoring} /> */}
             <View style={globalStyles.textContainer}>
               <Text style={styles.title}>REF: {id}</Text>
-              <Text style={styles.historyContent}>Handler: {handler}</Text>
-              <Text style={styles.historyContent}>Task: {action}</Text>
+              <Text
+                style={styles.historyContent}
+              >{`\u2022 Handler: ${handler}`}</Text>
+              <Text
+                style={styles.historyContent}
+              >{`\u2022 Task: ${action}`}</Text>
               <Text style={styles.historyContent}>
-                Completed: {completedDate}
+                {`\u2022 Completed: ${completedDate}`}
               </Text>
-              <Text style={styles.historyContent}>Charge: {cost}</Text>
-              <Text style={styles.historyContent}>Rating: {rating}</Text>
-              <Text style={styles.historyContent}>Location: {location}</Text>
+              <Text
+                style={styles.historyContent}
+              >{`\u2022 Charge: ${cost}`}</Text>
+              <Text
+                style={styles.historyContent}
+              >{`\u2022 Rating: ${rating}`}</Text>
+              <Text
+                style={styles.historyContent}
+              >{`\u2022 Location: ${location}`}</Text>
             </View>
           </View>
         )
