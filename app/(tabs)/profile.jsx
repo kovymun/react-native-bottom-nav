@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, Button } from "react-native";
 import { globalStyles } from "../../styles/globalStyles";
 
+// Profile component to display user profile information
 const Profile = () => {
   return (
     <View style={globalStyles.screen}>
@@ -34,7 +35,7 @@ const Profile = () => {
         </Text>
       </View>
 
-      {/* Edit and logout button - not function yet */}
+      {/* Buttons for profile edit and logout functionality - These are placeholders and don't have functionality yet */}
       <View style={styles.buttonContainer}>
         <Button title="Edit Profile" color="#009688" onPress={() => {}} />
         <Button title="Logout" color="#FF5722" onPress={() => {}} />

@@ -1,8 +1,8 @@
 import { StyleSheet, Text, View, Image } from "react-native";
-import React from "react";
 import { taskCategories } from "../../constants/taskCategories";
 import { globalStyles } from "../../styles/globalStyles";
 
+// Home component displaying the introduction to the Help Mate app and popular tasks/projects offered
 const Home = () => {
   return (
     <View style={globalStyles.screen}>
@@ -25,7 +25,7 @@ const Home = () => {
         Popular Projects
       </Text>
 
-      {/* Card Element */}
+      {/* Card Element - Projects/tasks offered */}
       {taskCategories.map(({ id, title, cost, image }) => (
         <View style={globalStyles.card} key={id}>
           <Image style={styles.image} source={image} />

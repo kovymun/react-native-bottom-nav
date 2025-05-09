@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, Image } from "react-native";
 import { globalStyles } from "../../styles/globalStyles";
 import { completedTasks } from "../../constants/completedTasks";
 
+// History component to display a list of completed tasks and their details
 const History = () => {
   return (
     <View style={globalStyles.screen}>
@@ -10,11 +11,10 @@ const History = () => {
         Below is a detailed overview of your most recently completed tasks.
       </Text>
 
-      {/* Card Element */}
+      {/* Card Element - Completed task history */}
       {completedTasks.map(
         ({ id, action, handler, completedDate, cost, rating, location }) => (
           <View style={[globalStyles.card, { padding: 15 }]} key={id}>
-            {/* <Image style={styles.image} source={Tutoring} /> */}
             <View style={globalStyles.textContainer}>
               <Text style={styles.title}>REF: {id}</Text>
               <Text
