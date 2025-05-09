@@ -1,4 +1,4 @@
-// List of Task Categories offered by Help-Mate
+// This array defines the various service categories available on the Help-Mate application
 
 export const taskCategories = [
   {
