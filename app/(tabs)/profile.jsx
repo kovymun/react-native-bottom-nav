@@ -28,7 +28,7 @@ const Profile = () => {
         </Text>
         <Text style={styles.profileText}>
           <Text style={{ fontWeight: "bold", letterSpacing: 2 }}>
-            Location:
+            Location:{" "}
           </Text>
           Bloemfontein, Free State, South Africa
         </Text>
