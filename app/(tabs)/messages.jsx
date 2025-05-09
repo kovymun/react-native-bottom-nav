@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { globalStyles } from "../../styles/globalStyles";
 import { messages } from "../../constants/messageContent";
 
+// Messages component displaying a list of direct messages exchanged between the task handler and requester.
 const Messages = () => {
   return (
     <View style={globalStyles.screen}>
@@ -9,13 +10,14 @@ const Messages = () => {
         Messages
       </Text>
 
-      {/* Message History Card */}
+      {/* Card Element - Message History */}
       {messages.map(({ id, handler, content }) => (
         <View key={id} style={[globalStyles.card, { padding: 15 }]}>
           {/* Handler Circle */}
           <View style={styles.handlerCircle}>
             <Text style={styles.handlerText}>{handler}</Text>
           </View>
+
           {/* Message Content */}
           <View style={globalStyles.textContainer}>
             <Text style={globalStyles.screenContent}>{content}</Text>
