@@ -1,7 +1,5 @@
-import { StyleSheet, Text, View, Image, Button } from "react-native";
-import React from "react";
+import { StyleSheet, Text, View, Button } from "react-native";
 import { globalStyles } from "../../styles/globalStyles";
-// import ProfilePic from "../../assets/pp.jpg";
 
 const Profile = () => {
   return (
@@ -30,7 +28,7 @@ const Profile = () => {
         </Text>
         <Text style={styles.profileText}>
           <Text style={{ fontWeight: "bold", letterSpacing: 2 }}>
-            Location:{" "}
+            Location:
           </Text>
           Bloemfontein, Free State, South Africa
         </Text>

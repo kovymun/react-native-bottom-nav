@@ -1,10 +1,12 @@
 import { StyleSheet } from "react-native";
 
+// globalStyles object to maintain reusable styling throughout the application
 export const globalStyles = StyleSheet.create({
   screen: {
     flex: 1,
     padding: 20,
   },
+
   screenTitle: {
     fontSize: 28,
     textAlign: "center",
@@ -19,6 +21,7 @@ export const globalStyles = StyleSheet.create({
     paddingHorizontal: 8,
     marginVertical: 24,
   },
+
   card: {
     flexDirection: "row",
     alignItems: "center",
@@ -32,6 +35,7 @@ export const globalStyles = StyleSheet.create({
     elevation: 3,
     marginBottom: 16,
   },
+
   textContainer: {
     flex: 1,
     marginLeft: 12,

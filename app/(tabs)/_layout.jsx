@@ -1,33 +1,40 @@
-import { View, Text } from "react-native";
-import React from "react";
 import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 
+// Layout component responsible for rendering bottom tab navigation
 const Layout = () => {
   return (
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: "blue",
-        tabBarInactiveTintColor: "gray",
+        tabBarActiveTintColor: "#00C569",
+        tabBarInactiveTintColor: "#7A7A7A",
         tabBarStyle: {
           backgroundColor: "white",
-          borderWidth: 2,
+          borderWidth: 1,
           elevation: 10,
-          height: 65,
+          height: 60,
+        },
+        tabBarItemStyle: {
+          justifyContent: "center",
+          alignItems: "center",
         },
         tabBarLabelStyle: {
-          fontSize: 15,
+          fontSize: 14,
         },
       }}
     >
-      {/* Tab Screen - Home Screen */}
+      {/* Tab Screen - Home */}
       <Tabs.Screen
         name="index"
         options={{
           title: "Home",
-          tabBarIcon: ({ focused }) => (
-            <Ionicons size={24} name={focused ? "home" : "home-outline"} />
+          tabBarIcon: ({ focused, color }) => (
+            <Ionicons
+              size={24}
+              name={focused ? "home" : "home-outline"}
+              color={color}
+            />
           ),
         }}
       ></Tabs.Screen>
@@ -37,10 +44,11 @@ const Layout = () => {
         name="messages"
         options={{
           title: "Messages",
-          tabBarIcon: ({ focused }) => (
+          tabBarIcon: ({ focused, color }) => (
             <Ionicons
               size={24}
               name={focused ? "chatbubble" : "chatbubble-outline"}
+              color={color}
             />
           ),
         }}
@@ -50,8 +58,12 @@ const Layout = () => {
         name="history"
         options={{
           title: "History",
-          tabBarIcon: ({ focused }) => (
-            <Ionicons size={24} name={focused ? "time" : "time-outline"} />
+          tabBarIcon: ({ focused, color }) => (
+            <Ionicons
+              size={24}
+              name={focused ? "time" : "time-outline"}
+              color={color}
+            />
           ),
         }}
       ></Tabs.Screen>
@@ -61,11 +73,11 @@ const Layout = () => {
         name="profile"
         options={{
           title: "Profile",
-          tabBarIcon: ({ focused }) => (
+          tabBarIcon: ({ focused, color }) => (
             <Ionicons
               size={24}
               name={focused ? "person" : "person-outline"}
-              color={focused ? "green" : "black"}
+              color={color}
             />
           ),
         }}
