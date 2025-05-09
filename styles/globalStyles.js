@@ -13,10 +13,16 @@ export const globalStyles = StyleSheet.create({
     fontWeight: 700,
     color: "#00C569",
   },
+
+  description: {
+    fontSize: 16,
+    paddingHorizontal: 8,
+    marginVertical: 24,
+  },
   card: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#f6f8f6", // soft light color
+    backgroundColor: "#f6f8f6",
     borderRadius: 16,
     padding: 8,
     shadowColor: "#000",

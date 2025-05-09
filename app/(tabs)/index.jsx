@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <View style={globalStyles.screen}>
       <Text style={globalStyles.screenTitle}>Help Mate</Text>
-      <Text style={styles.description}>
+      <Text style={globalStyles.description}>
         Need a hand? Help Mate connects you with trusted local freelancers for
         everyday tasks like moving furniture, fixing leaks, cleaning homes, or
         tutoring your kids. Find reliable help nearby fast, affordable, and
@@ -42,12 +42,6 @@ const Home = () => {
 export default Home;
 
 const styles = StyleSheet.create({
-  description: {
-    fontSize: 16,
-    paddingHorizontal: 8,
-    marginVertical: 24,
-  },
-
   image: {
     width: 100,
     height: 100,
